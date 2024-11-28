@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script type="text/javascript">
+<!--
+function reveal(answer){
+var e=document.getElementById(answer);
+if(e.style.display=='none')
+	e.style.display='block';
+else
+	e.style.display='none';
+}
+//-->
+</script>
+<title>Learning Area</title>
+<link href="tabs.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+body {
+	margin-top: 0px;
+	margin-left: 1px;
+	margin-right: 1px;
+	background-image: url();
+	background-position:bottom right;
+}
+-->
+</style>
+<link href="newLA.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<table width="100%"  border="0" cellpadding="3">
+  <tr>
+     <td width="132" valign="top" align="center">
+          <div align="center">
+              <table width="125" height="350" border="0" align="center" cellpadding="2" cellspacing="0" bordercolor="#0000FF" bgcolor="#0000FF">
+                <tr>
+                  <td align="center" valign="top" class="menuText"><p><br>
+                    Click on an FAQ  to show or hide the answer </p>
+                    <p class="menuText"> These are frequently asked questions when using the the system</p>
+                </tr>
+            </table></div>
+			 </td>
+    <td valign="top"><p align="left"><span class="title">Frequenty Asked Questions<br>
+      </span></p> 
+      <div class="subtitle"><img src="images/squaresblack.jpg" alt="" width="14" height="14"> Main Category No 1 FAQs</div>
+      <div class="faqQ"><a  onClick="reveal('answer1');">This is where the first question would go?</a></div>
+      <div style="display:none" id="answer1">
+        <p class="faqA">      
+        <ul>
+          <li>This is where the answer to question would go.</li>
+        </ul>
+        </p>
+      </div>
+            
+      <div class="tinyspace">&nbsp;</div>
+      </p>
+      <p>      
+      <div class="subtitle"><img src="images/squaresblack.jpg" alt="" width="14" height="14">  Main Category No 2 FAQ</div>
+      <div class="faqQ"><a  onClick="reveal('answer101');">This is where the 2nd question would go?</a></div>
+      <div style="display:none" id="answer101">
+        <p class="faqA">
+        <ul>
+          <li>This is where the answer to question would go.</li>
+        </ul>
+        </p>
+      </div>
+      <div class="tinyspace">&nbsp;</div>
+      <div class="faqQ"><a  onClick="reveal('answer102');">This is where the 3rd question would go?</a></div>
+      <div style="display:none" id="answer102">
+        <p class="faqA">
+        <ul>
+          <li>This is where the answer to question would go.</li>
+        </ul>
+        </p>
+      </div>
+      <div class="tinyspace">&nbsp;</div>
+      </p>
+      <p>etc      
+      </p>
+      <p>      
+      <div class="title"></div>
+      <p></tr></td>
+<tr class="small" align="center" ><td colspan="2">&nbsp;</td>
+</tr>
+</table>
+</body>
+</html>
