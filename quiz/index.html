@@ -68,30 +68,36 @@
 </head>
 <body>
     <header>
-        <h1>eLearning Quiz</h1>
+        <h1>eLearning SIOCS Quiz</h1>
         <p>Test your knowledge with this quiz!</p>
     </header>
     <div class="container">
         <section class="quiz-section">
             <h2 class="quiz-title">Quiz Questions</h2>
             <div class="question">
-                <p class="question-title">1. What is the capital of France?</p>
+                <p class="question-title">1. SIOCS has two application; SOCS & EICS?</p>
                 <ul class="options">
-                    <li><label><input type="radio" name="q1" value="a"> Berlin</label></li>
-                    <li><label><input type="radio" name="q1" value="b"> Madrid</label></li>
-                    <li><label><input type="radio" name="q1" value="c"> Paris</label></li>
-                    <li><label><input type="radio" name="q1" value="d"> Rome</label></li>
+                    <li><label><input type="radio" name="q1" value="a"> True</label></li>
+                    <li><label><input type="radio" name="q1" value="b"> False</label></li>
                 </ul>
             </div>
             <div class="question">
-                <p class="question-title">2. What is the largest planet in our solar system?</p>
+                <p class="question-title">2. SOCS is a desktop-based application?</p>
                 <ul class="options">
-                    <li><label><input type="radio" name="q2" value="a"> Earth</label></li>
-                    <li><label><input type="radio" name="q2" value="b"> Jupiter</label></li>
-                    <li><label><input type="radio" name="q2" value="c"> Mars</label></li>
-                    <li><label><input type="radio" name="q2" value="d"> Venus</label></li>
+                    <li><label><input type="radio" name="q2" value="a"> True</label></li>
+                    <li><label><input type="radio" name="q2" value="b"> False</label></li>
                 </ul>
             </div>
+	<div class="question">
+                <p class="question-title">3. How soon does the data get updated in SIOCS?</p>
+                <ul class="options">
+                    <li><label><input type="radio" name="q3" value="a"> Every hour</label></li>
+                    <li><label><input type="radio" name="q3" value="b"> Weekly</label></li>
+			<li><label><input type="radio" name="q3" value="c"> Near real time</label></li>
+
+                </ul>
+            </div>
+
             <button class="submit-btn" onclick="checkAnswers()">Submit</button>
             <div class="result" id="result"></div>
         </section>
@@ -99,12 +105,15 @@
     <script>
         function checkAnswers() {
             var correctAnswers = 0;
-            var totalQuestions = 2;
+            var totalQuestions = 3;
 
-            if (document.querySelector('input[name="q1"]:checked')?.value === 'c') {
+            if (document.querySelector('input[name="q1"]:checked')?.value === 'a') {
                 correctAnswers++;
             }
             if (document.querySelector('input[name="q2"]:checked')?.value === 'b') {
+                correctAnswers++;
+            }
+		if (document.querySelector('input[name="q3"]:checked')?.value === 'c') {
                 correctAnswers++;
             }
 
