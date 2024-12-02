@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eLearning Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+        .quiz-section {
+            background-color: white;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .quiz-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .question {
+            margin-bottom: 1rem;
+        }
+        .question-title {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        .options {
+            list-style-type: none;
+            padding: 0;
+        }
+        .options li {
+            margin-bottom: 0.5rem;
+        }
+        .submit-btn {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+        .result {
+            margin-top: 2rem;
+            font-size: 1.2rem;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>eLearning Quiz</h1>
+        <p>Test your knowledge with this quiz!</p>
+    </header>
+    <div class="container">
+        <section class="quiz-section">
+            <h2 class="quiz-title">Quiz Questions</h2>
+            <div class="question">
+                <p class="question-title">1. What is the capital of France?</p>
+                <ul class="options">
+                    <li><label><input type="radio" name="q1" value="a"> Berlin</label></li>
+                    <li><label><input type="radio" name="q1" value="b"> Madrid</label></li>
+                    <li><label><input type="radio" name="q1" value="c"> Paris</label></li>
+                    <li><label><input type="radio" name="q1" value="d"> Rome</label></li>
+                </ul>
+            </div>
+            <div class="question">
+                <p class="question-title">2. What is the largest planet in our solar system?</p>
+                <ul class="options">
+                    <li><label><input type="radio" name="q2" value="a"> Earth</label></li>
+                    <li><label><input type="radio" name="q2" value="b"> Jupiter</label></li>
+                    <li><label><input type="radio" name="q2" value="c"> Mars</label></li>
+                    <li><label><input type="radio" name="q2" value="d"> Venus</label></li>
+                </ul>
+            </div>
+            <button class="submit-btn" onclick="checkAnswers()">Submit</button>
+            <div class="result" id="result"></div>
+        </section>
+    </div>
+    <script>
+        function checkAnswers() {
+            var correctAnswers = 0;
+            var totalQuestions = 2;
+
+            if (document.querySelector('input[name="q1"]:checked')?.value === 'c') {
+                correctAnswers++;
+            }
+            if (document.querySelector('input[name="q2"]:checked')?.value === 'b') {
+                correctAnswers++;
+            }
+
+            var resultElement = document.getElementById('result');
+            resultElement.textContent = 'You got ' + correctAnswers + ' out of ' + totalQuestions + ' correct!';
+        }
+    </script>
+</body>
+</html>
